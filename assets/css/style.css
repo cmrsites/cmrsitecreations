@@ -1,0 +1,107 @@
+/* Overrides Bootstrap Styles */
+body {
+	background:url() #fff;
+	background-position:top left;
+	background-repeat:repeat;
+	margin-top: 8px;
+	font: 16px/18px normal Helvetica, Arial, sans-serif;
+	color: #4F5155;
+	padding-bottom: 30px;
+	margin-bottom: 20px;
+}
+.header{
+	height:50px;
+}
+.logo{
+	padding:8px 10px;
+}
+
+
+.headline{
+	padding:8px 0px;
+}
+
+.container-top{
+	margin-top:65px;
+}
+
+.content-body{
+	padding:10px 30px;
+	border: 1px solid #eee;
+	background: #fff;
+	min-height:600px;
+}
+
+
+
+.disclaimer{
+	text-align: left;
+	font-size: 12px;
+	color:#333;
+	padding: 0 10px 0 10px;
+	margin: 10px 0 0 0;
+}
+
+.copyright{
+	text-align: right;
+	font-size: 12px;
+	color:#990000;
+	border-top: 1px solid #D0D0D0;
+	line-height: 32px;
+	padding: 0 10px 0 10px;
+	margin: 10px 0 0 0;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container .text-muted {
+	margin: 20px 0;
+}
+
+.footer > .container {
+	font-size:13px;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 80px;
+	background-color: #fff;
+	padding:4px 10px;
+	border-top:1px solid #ccc;
+}
+
+code {
+	font-size: 80%;
+}
+
+ul
+{
+	list-style-type: none;
+	padding: 0 2px;
+}
+
+a{
+	color:#1c63a3;
+}
+
+.red{
+	color:#990000;
+}
+
+.orange{
+	color:#1c63a3;
+}
+
+
+
+
+
+
+
+
+
+
+
