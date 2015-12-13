@@ -27,7 +27,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="<?= base_url(); ?>">Dashboard</a></li>
+                <li><a href="<?= base_url(); ?>dashboard/home">Dashboard</a></li>
                 <li><a href="<?= base_url(); ?>site/about_us">Settings</a></li>
                 <li><a href="<?= base_url(); ?>site/contact_us">Stats</a></li>
                 <!--<li class="dropdown">
@@ -50,9 +50,18 @@
 </nav> 
  <div class="container container-top">
 	<div class="row">
-    <h1>Admin Template</h1>
-	<?php 
-	$this->load->view($module.'/'.$view_file);
+    <h1>Admin Dashboard</h1>
+	<?php
+	if (!isset($module)){
+		$module = $this->uri->segment(1);
+	}	
+	if (!isset($view_file)) {
+		$view_file = $this->uri->segment(2);
+	}	
+	if (($module!="") && ($view_file!="")) {
+		$path = $module."/".$view_file;
+		$this->load->view($path);
+	}	
 	?>
 	</div>
 </div>

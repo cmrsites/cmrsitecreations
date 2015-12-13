@@ -10,6 +10,7 @@ class Templates extends MX_Controller
 	}
 	
 	public function admin($data){
+		Modules::run('site_security/check_is_admin');
 		$this->load->view('admin', $data);
 	}
 
