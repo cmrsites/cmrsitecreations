@@ -12,11 +12,11 @@ class Store_items extends MX_Controller
     {
 
         $submit = $this->input->post('submit', TRUE);
-        if ($submit == "No -Cancel") {
+        if ($submit=="No -Cancel") {
             redirect('store_items/create/' . $update_id);
         }
 
-        if ($submit == "Yes -Delete Item") {
+        if ($submit=="Yes -Delete Item") {
             //delete the item
             $this->_delete($update_id);
             //add flashdata
@@ -104,7 +104,7 @@ class Store_items extends MX_Controller
 
         $this->load->library('form_validation');
         $this->form_validation->set_rules('item_name', 'Item Name', 'required');
-        $this->form_validation->set_rules('item_price', 'Item Priace', 'is_numeric|required');
+        $this->form_validation->set_rules('item_price', 'Item Price', 'is_numeric|required');
         $this->form_validation->set_rules('item_description', 'Item Description', 'required');
 
         if ($this->form_validation->run() == FALSE) {
@@ -141,6 +141,7 @@ class Store_items extends MX_Controller
         if ($flash != "") {
             $data['flash'] = $flash;
         }
+
         $data['view_file'] = "manage";
         $this->load->module('templates');
         $this->templates->$templates($data);
